@@ -1,0 +1,140 @@
+$date
+	Tue Mar 15 21:35:02 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module n_bit_counter_tb $end
+$var wire 3 ! f [2:0] $end
+$var wire 1 " cout $end
+$var reg 3 # a [2:0] $end
+$var reg 1 $ clear $end
+$var reg 1 % clk $end
+$scope module dut $end
+$var wire 3 & A [2:0] $end
+$var wire 1 % CLK $end
+$var wire 1 $ CLRN $end
+$var wire 3 ' F [2:0] $end
+$var wire 3 ( D [2:0] $end
+$var wire 1 " COUT $end
+$scope module adder $end
+$var wire 3 ) A [2:0] $end
+$var wire 3 * S [2:0] $end
+$var wire 4 + D [3:0] $end
+$var wire 1 " COUT $end
+$var wire 3 , B [2:0] $end
+$upscope $end
+$scope module register $end
+$var wire 1 % CLK $end
+$var wire 1 $ CLRN $end
+$var wire 3 - D [2:0] $end
+$var reg 3 . Q [2:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 .
+b1 -
+b0 ,
+b1 +
+b1 *
+b1 )
+b1 (
+b0 '
+b1 &
+x%
+0$
+b1 #
+0"
+b0 !
+$end
+#10000
+1$
+#20000
+b10 (
+b10 *
+b10 -
+b10 +
+b1 !
+b1 '
+b1 ,
+b1 .
+1%
+#30000
+0%
+#40000
+b11 (
+b11 *
+b11 -
+b11 +
+b10 !
+b10 '
+b10 ,
+b10 .
+1%
+#50000
+0%
+#60000
+b100 (
+b100 *
+b100 -
+b100 +
+b11 !
+b11 '
+b11 ,
+b11 .
+1%
+#70000
+0%
+#80000
+b101 (
+b101 *
+b101 -
+b101 +
+b100 !
+b100 '
+b100 ,
+b100 .
+1%
+#90000
+0%
+#100000
+b110 (
+b110 *
+b110 -
+b110 +
+b101 !
+b101 '
+b101 ,
+b101 .
+1%
+#110000
+0%
+#120000
+b111 (
+b111 *
+b111 -
+b111 +
+b110 !
+b110 '
+b110 ,
+b110 .
+1%
+#130000
+0%
+#140000
+b0 (
+b0 *
+b0 -
+1"
+b1000 +
+b111 !
+b111 '
+b111 ,
+b111 .
+1%

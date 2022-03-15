@@ -1,0 +1,150 @@
+#! /usr/local/Cellar/icarus-verilog/11.0/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/system.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/va_math.vpi";
+:vpi_module "/usr/local/Cellar/icarus-verilog/11.0/lib/ivl/v2009.vpi";
+S_0x7fc805707030 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x7fc8057050c0 .scope module, "n_bit_counter_tb" "n_bit_counter_tb" 3 4;
+ .timescale -9 -12;
+v0x6000016bcc60_0 .var "a", 2 0;
+v0x6000016bccf0_0 .var "clear", 0 0;
+v0x6000016bcd80_0 .var "clk", 0 0;
+v0x6000016bce10_0 .net "cout", 0 0, L_0x6000015bc3c0;  1 drivers
+v0x6000016bcea0_0 .net "f", 2 0, v0x6000016bc870_0;  1 drivers
+S_0x7fc805705230 .scope module, "dut" "n_bit_counter" 3 8, 4 36 0, S_0x7fc8057050c0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 3 "A";
+    .port_info 1 /INPUT 1 "CLK";
+    .port_info 2 /INPUT 1 "CLRN";
+    .port_info 3 /OUTPUT 3 "F";
+    .port_info 4 /OUTPUT 1 "COUT";
+P_0x6000031bea80 .param/l "WIDTH" 0 4 37, +C4<00000000000000000000000000000011>;
+v0x6000016bc900_0 .net "A", 2 0, v0x6000016bcc60_0;  1 drivers
+v0x6000016bc990_0 .net "CLK", 0 0, v0x6000016bcd80_0;  1 drivers
+v0x6000016bca20_0 .net "CLRN", 0 0, v0x6000016bccf0_0;  1 drivers
+v0x6000016bcab0_0 .net "COUT", 0 0, L_0x6000015bc3c0;  alias, 1 drivers
+v0x6000016bcb40_0 .net "D", 2 0, L_0x6000015bc320;  1 drivers
+v0x6000016bcbd0_0 .net "F", 2 0, v0x6000016bc870_0;  alias, 1 drivers
+S_0x7fc8057048e0 .scope module, "adder" "n_bit_adder" 4 48, 4 1 0, S_0x7fc805705230;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 3 "A";
+    .port_info 1 /INPUT 3 "B";
+    .port_info 2 /OUTPUT 3 "S";
+    .port_info 3 /OUTPUT 1 "COUT";
+P_0x6000031beb00 .param/l "WIDTH" 0 4 2, +C4<00000000000000000000000000000011>;
+v0x6000016bc1b0_0 .net "A", 2 0, v0x6000016bcc60_0;  alias, 1 drivers
+v0x6000016bc240_0 .net "B", 2 0, v0x6000016bc870_0;  alias, 1 drivers
+v0x6000016bc2d0_0 .net "COUT", 0 0, L_0x6000015bc3c0;  alias, 1 drivers
+v0x6000016bc360_0 .net "D", 3 0, L_0x6000015bc280;  1 drivers
+v0x6000016bc3f0_0 .net "S", 2 0, L_0x6000015bc320;  alias, 1 drivers
+v0x6000016bc480_0 .net *"_ivl_0", 3 0, L_0x6000015bc140;  1 drivers
+L_0x7fc806063008 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x6000016bc510_0 .net *"_ivl_3", 0 0, L_0x7fc806063008;  1 drivers
+v0x6000016bc5a0_0 .net *"_ivl_4", 3 0, L_0x6000015bc1e0;  1 drivers
+L_0x7fc806063050 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x6000016bc630_0 .net *"_ivl_7", 0 0, L_0x7fc806063050;  1 drivers
+L_0x6000015bc140 .concat [ 3 1 0 0], v0x6000016bcc60_0, L_0x7fc806063008;
+L_0x6000015bc1e0 .concat [ 3 1 0 0], v0x6000016bc870_0, L_0x7fc806063050;
+L_0x6000015bc280 .arith/sum 4, L_0x6000015bc140, L_0x6000015bc1e0;
+L_0x6000015bc320 .part L_0x6000015bc280, 0, 3;
+L_0x6000015bc3c0 .part L_0x6000015bc280, 3, 1;
+S_0x7fc805704a50 .scope module, "register" "n_d_ff" 4 50, 4 17 0, S_0x7fc805705230;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 1 "CLK";
+    .port_info 1 /INPUT 3 "D";
+    .port_info 2 /INPUT 1 "CLRN";
+    .port_info 3 /OUTPUT 3 "Q";
+P_0x6000031beb80 .param/l "WIDTH" 0 4 18, +C4<00000000000000000000000000000011>;
+v0x6000016bc6c0_0 .net "CLK", 0 0, v0x6000016bcd80_0;  alias, 1 drivers
+v0x6000016bc750_0 .net "CLRN", 0 0, v0x6000016bccf0_0;  alias, 1 drivers
+v0x6000016bc7e0_0 .net "D", 2 0, L_0x6000015bc320;  alias, 1 drivers
+v0x6000016bc870_0 .var "Q", 2 0;
+E_0x600002abcbd0/0 .event negedge, v0x6000016bc750_0;
+E_0x600002abcbd0/1 .event posedge, v0x6000016bc6c0_0;
+E_0x600002abcbd0 .event/or E_0x600002abcbd0/0, E_0x600002abcbd0/1;
+    .scope S_0x7fc805704a50;
+T_0 ;
+    %wait E_0x600002abcbd0;
+    %load/vec4 v0x6000016bc750_0;
+    %pad/u 32;
+    %cmpi/e 0, 0, 32;
+    %jmp/0xz  T_0.0, 4;
+    %pushi/vec4 0, 0, 3;
+    %assign/vec4 v0x6000016bc870_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0x6000016bc7e0_0;
+    %assign/vec4 v0x6000016bc870_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x7fc8057050c0;
+T_1 ;
+    %vpi_call/w 3 11 "$dumpfile", "n_bit_counter_tb.vcd" {0 0 0};
+    %vpi_call/w 3 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x7fc8057050c0 {0 0 0};
+    %pushi/vec4 1, 0, 3;
+    %store/vec4 v0x6000016bcc60_0, 0, 3;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6000016bccf0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bccf0_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x6000016bcd80_0, 0, 1;
+    %end;
+    .thread T_1;
+    .scope S_0x7fc8057050c0;
+T_2 ;
+    %vpi_call/w 3 38 "$monitor", "t=%3d clk=%d clear=%d a2=%d a1=%d a0=%d f2=%d f1=%d f0=%d cout=%d", $time, v0x6000016bcd80_0, v0x6000016bccf0_0, &PV<v0x6000016bcc60_0, 2, 1>, &PV<v0x6000016bcc60_0, 1, 1>, &PV<v0x6000016bcc60_0, 0, 1>, &PV<v0x6000016bcea0_0, 2, 1>, &PV<v0x6000016bcea0_0, 1, 1>, &PV<v0x6000016bcea0_0, 0, 1>, v0x6000016bce10_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "-";
+    "n_bit_counter_tb.sv";
+    "./n_bit_counter.sv";

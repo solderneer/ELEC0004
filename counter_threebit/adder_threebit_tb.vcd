@@ -1,0 +1,88 @@
+$date
+	Tue Mar 15 22:38:09 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module adder_threebit_tb $end
+$var wire 3 ! s [2:0] $end
+$var wire 1 " cout $end
+$var reg 3 # a [2:0] $end
+$var reg 3 $ b [2:0] $end
+$scope module dut $end
+$var wire 3 % A [2:0] $end
+$var wire 3 & B [2:0] $end
+$var wire 3 ' S [2:0] $end
+$var wire 1 " COUT $end
+$var wire 1 ( C2 $end
+$var wire 1 ) C1 $end
+$scope module A1 $end
+$var wire 1 * A $end
+$var wire 1 + B $end
+$var wire 1 , CIN $end
+$var wire 1 ) COUT $end
+$var wire 1 - S $end
+$upscope $end
+$scope module A2 $end
+$var wire 1 . A $end
+$var wire 1 / B $end
+$var wire 1 ) CIN $end
+$var wire 1 ( COUT $end
+$var wire 1 0 S $end
+$upscope $end
+$scope module A3 $end
+$var wire 1 1 A $end
+$var wire 1 2 B $end
+$var wire 1 ( CIN $end
+$var wire 1 " COUT $end
+$var wire 1 3 S $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+b0 '
+b0 &
+b0 %
+b0 $
+b0 #
+0"
+b0 !
+$end
+#20000
+1-
+b101 !
+b101 '
+13
+1+
+11
+b1 $
+b1 &
+b100 #
+b100 %
+#40000
+0-
+b0 !
+b0 '
+03
+1"
+0+
+12
+b100 $
+b100 &
