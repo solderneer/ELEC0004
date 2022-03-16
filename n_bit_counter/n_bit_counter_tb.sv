@@ -12,8 +12,10 @@ $dumpfile("n_bit_counter_tb.vcd");
 $dumpvars(0, n_bit_counter_tb);
 
 a = 3'h1;
+clear = 1'b0;
+clk = 1'b1;
 
-clear = 0;
+// Testing add 1
 #10; clear = 1;
 #10; clk = 1;
 #10; clk = 0; 
@@ -31,6 +33,23 @@ clear = 0;
 #10; clk = 0;
 #10; clk = 1;
 #10; clk = 0;
+#10; clk = 1;
+#10; clear = 0;
+#10; clear = 1;
+
+// Testing add 4
+a = 3'h4;
+#10; clear = 1;
+#10; clk = 1;
+#10; clk = 0; 
+#10; clk = 1; 
+#10; clk = 0;
+#10; clk = 1;
+#10; clk = 0;
+#10; clk = 1;
+#10; clear = 0;
+#10; clear = 1;
+
 
 // Add further test inputs.
 

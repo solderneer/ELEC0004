@@ -15,8 +15,13 @@ $dumpvars(0, adder_threebit_tb);
 a = 3'h0;
 b = 3'h0;
 
-#20; a = 3'h4; b=3'h1;
-#20 a = 3'h4; b=3'h4;
+#20; a = 3'h1; b=3'h1; // Expect 2
+#20; a = 3'h2; b=3'h2; // Expect 4
+#20; a = 3'h4; b=3'h1; // Expect 5
+#20; a = 3'h4; b=3'h3; // Expect 7
+#20; a = 3'h4; b=3'h4; //Expect 8 (cout = 1, the rest 000)
+#20; a = 3'h7; b=3'h7; //Expect 14 (cout = 1, the rest 110)
+#20; a = 3'h0; b=3'h0; //Expect 14 (cout = 1, the rest 110)
 // Add further test inputs here.
 
 end

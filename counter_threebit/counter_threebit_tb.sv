@@ -13,8 +13,10 @@ $dumpfile("counter_threebit_tb.vcd");
 $dumpvars(0, counter_threebit_tb);
 
 a = 3'h1;
+clear = 1'b0;
+clk = 1'b1;
 
-clear = 0;
+// Testing add 1
 #10; clear = 1;
 #10; clk = 1;
 #10; clk = 0; 
@@ -36,7 +38,18 @@ clear = 0;
 #10; clear = 0;
 #10; clear = 1;
 
-// Add further test inputs.
+// Testing add 4
+a = 3'h4;
+#10; clear = 1;
+#10; clk = 1;
+#10; clk = 0; 
+#10; clk = 1; 
+#10; clk = 0;
+#10; clk = 1;
+#10; clk = 0;
+#10; clk = 1;
+#10; clear = 0;
+#10; clear = 1;
 
 end
 
